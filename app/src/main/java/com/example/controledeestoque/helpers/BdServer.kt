@@ -200,6 +200,6 @@ class BdServer() {
     }
 
     companion object {
-        private const val DB_URL = "jdbc:postgresql://estoqueapp.c7prjkjnkjjo.sa-east-1.rds.amazonaws.com:5432/estoqueApp"
+        private const val DB_URL = "jdbc:postgresql:/SEU BANCO DE DADOS AQUI"
     }
 }
