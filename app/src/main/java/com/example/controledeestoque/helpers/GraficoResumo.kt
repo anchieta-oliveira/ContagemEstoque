@@ -26,11 +26,10 @@ class GraficoResumo {
             .chartType(AAChartType.Pie)
             .backgroundColor("#F8F8FA")
             .dataLabelsEnabled(true)
-            .yAxisTitle("R$")
             .legendEnabled(false)
             .series(arrayOf(
                 AASeriesElement()
-                    .name("Valor R$")
+                    .name("Prod.")
                     .borderWidth(0f)
                     .lineWidth(0f)
                     .innerSize("60%")
