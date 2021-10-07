@@ -60,9 +60,7 @@ class Home : AppCompatActivity() {
     fun carregarRecycleAgenda(listaAgenda: MutableList<AgendaContagem>){
         val recycleAgendaContagem = findViewById<RecyclerView>(R.id.recycle_agenda_conategem)
         val agendaContagem = AdapterAgenda(listaAgenda, this){
-            //eventos de click
             val irResumoContagem = Intent(this, ResumoContagem::class.java)
-            //enviar infos da contagem para o resumo
             irResumoContagem.putExtra(EXTRA_AGENDA, it)
             irResumoContagem.putExtra(EXTRA_LOGIN, login)
             startActivity(irResumoContagem)

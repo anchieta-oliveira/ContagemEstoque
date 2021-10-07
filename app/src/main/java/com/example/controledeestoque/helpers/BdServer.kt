@@ -3,8 +3,6 @@ package com.example.controledeestoque.helpers
 import android.content.Context
 import android.util.Log
 import com.example.controledeestoque.contagem.AgendaContagem
-import com.example.controledeestoque.contagem.Contagem
-import com.example.controledeestoque.contagem.ListaProdutosContagem
 import com.example.controledeestoque.divergencia.Divergencia
 import com.example.controledeestoque.produto.Produto
 import com.example.controledeestoque.produto.QtdProduto
@@ -119,9 +117,6 @@ class BdServer() {
         conexao.close()
     }
 
-    fun addContagem(){
-        //Adiciona a contagem no servidor
-    }
 
     fun atualizarDivergencias(login: Login, lista:MutableList<Divergencia>){
         //adiciona novas divergencias caso não existam. Comparar pelo codigo do produto e qtd divergente,

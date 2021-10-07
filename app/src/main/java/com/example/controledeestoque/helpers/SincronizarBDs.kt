@@ -6,7 +6,6 @@ import com.example.controledeestoque.divergencia.Divergencia
 
 class SincronizarBDs() {
     //Baixar infos do BDserver e inserir no BD local: (1) ProdutosContagem;
-    //(2) ...
 
     fun sinProdutosContagem(login: Login, context: Context,agendaContagem: AgendaContagem){
        try {

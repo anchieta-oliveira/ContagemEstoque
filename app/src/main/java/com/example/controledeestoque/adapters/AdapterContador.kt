@@ -63,13 +63,6 @@ class AdapterContador(private val dataListContagem: MutableList<Contagem>, priva
         notifyDataSetChanged()
     }
 
-    fun addContagem(contagem: Contagem){
-        this.dataListContagem.add(contagem)
-        notifyItemInserted(dataListContagem.lastIndex)
-    }
 
-    fun retornarLista(): MutableList<Contagem> {
-        return dataListContagem
-    }
 
 }
