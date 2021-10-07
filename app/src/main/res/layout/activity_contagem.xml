@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secundaria"
+    tools:context=".ContagemActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/scan_contagem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </FrameLayout>
+
+
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bordas_suaves"
+        android:backgroundTint="@color/secundaria"
+        android:elevation="2dp"
+        android:hint="Codigo de barras ou Codigo produto"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/secundaria2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_contador"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="250dp"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints"
+        tools:listitem="@layout/item_recycle_contagem" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/menu_contagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/secundaria3"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/tag_novo"
+        android:layout_width="@dimen/tamanho_30"
+        android:layout_height="@dimen/tamanho_30"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/tag_novo"
+        android:visibility="invisible"
+        app:fabCustomSize="46dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/menu_contagem"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/text_novo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="22dp"
+        android:text="@string/tag_novo"
+        android:textColor="@color/secundaria2"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/menu_contagem"
+        app:layout_constraintEnd_toStartOf="@+id/tag_novo" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/tag_danificado"
+        android:layout_width="@dimen/tamanho_30"
+        android:layout_height="@dimen/tamanho_30"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/tag_danificado"
+        android:visibility="invisible"
+        app:fabCustomSize="46dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/tag_novo"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/text_danificado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="22dp"
+        android:text="@string/tag_danificado"
+        android:textColor="@color/secundaria2"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tag_novo"
+        app:layout_constraintEnd_toStartOf="@+id/tag_danificado" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/tag_mostruario"
+        android:layout_width="@dimen/tamanho_30"
+        android:layout_height="@dimen/tamanho_30"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/tag_mostruario"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tag_danificado"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/text_mostruario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="22dp"
+        android:text="@string/tag_mostruario"
+        android:textColor="@color/secundaria2"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tag_danificado"
+        app:layout_constraintEnd_toStartOf="@+id/tag_mostruario" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/menu_contagem_salvar"
+        android:layout_width="@dimen/tamanho_46"
+        android:layout_height="@dimen/tamanho_46"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/secundaria3"
+        android:src="@drawable/ic_baseline_save_24"
+        android:visibility="invisible"
+        app:fabCustomSize="46dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/menu_contagem" />
+
+    <LinearLayout
+        android:id="@+id/conteiner_escuro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.15"
+        android:background="@color/black"
+        android:elevation="5dp"
+        android:orientation="horizontal"
+        android:visibility="gone" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conteiner_edit_contagem_geral"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:elevation="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:alpha="0.1"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conteiner_edit_contagem"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/bordas_suaves"
+            android:elevation="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/edit_contagem_Nome_prod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome Produto"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edit_qtd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Qtd"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edit_label_danificado"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/edit_cont_bot_excluir"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secundaria3"
+                android:outlineSpotShadowColor="@color/black"
+                android:text="@string/excluir"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/edit_cont_bot_cancelar"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/edit_cont_bot_salvar"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secundaria3"
+                android:outlineSpotShadowColor="@color/black"
+                android:text="@string/salvar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edit_cont_bot_cancelar" />
+
+            <Button
+                android:id="@+id/edit_cont_bot_cancelar"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secundaria3"
+                android:outlineSpotShadowColor="@color/black"
+                android:text="@string/cancelar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/edit_label_novo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="20sp"
+                android:backgroundTint="@color/secundaria"
+                android:foreground="@drawable/ic_baseline_label_24"
+                android:foregroundTint="@color/tag_novo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/edit_label_danificado"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="20sp"
+                android:backgroundTint="@color/secundaria"
+                android:foreground="@drawable/ic_baseline_label_24"
+                android:foregroundTint="@color/tag_danificado"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edit_label_mostruario"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/edit_label_mostruario"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="20sp"
+                android:backgroundTint="@color/secundaria"
+                android:foreground="@drawable/ic_baseline_label_24"
+                android:foregroundTint="@color/tag_mostruario"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edit_label_novo"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

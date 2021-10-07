@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaria">#2196F3</color>
+    <color name="primaria2">#3F51B5</color>
+    <color name="primaria3">#05467A</color>
+    <color name="secundaria">#FAFAFA</color>
+    <color name="secundaria2">#A5A5A5</color>
+    <color name="secundaria3">#FFC61B</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="tag_novo">#59FF00</color>
+    <color name="tag_danificado">#FF1100</color>
+    <color name="tag_mostruario">#FFEE58</color>
+</resources>

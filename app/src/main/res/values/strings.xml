@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Controle de Estoque</string>
+    <string name="nome_usuario">Bem vindo</string>
+    <string name="divergencias_pendentes">Divergencias Pendentes</string>
+    <string name="agenda_contagem">Agenda de Contagens</string>
+    <string name="tag_mostruario">Mostruario</string>
+    <string name="tag_danificado">Danificado</string>
+    <string name="tag_novo">Novo</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="salvar">Salvar</string>
+    <string name="excluir">Excluir</string>
+</resources>
